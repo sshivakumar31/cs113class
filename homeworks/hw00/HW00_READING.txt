@@ -1,0 +1,9 @@
+1. According to the author, if computer science is not about computers, then what is it about?
+The algorithm is the chief object of study. It is not about the physical machine.
+2. In your own words, what is an algorithm?
+It is the set of well-ordered steps or procedures to achieve the specific goal. It is a systematic and unambiguous set of instructions that can be executed by a computing agent.
+3. According to the author, why is computer science not a science?
+Computers are tools. Science follows the scientific method. Algorithms are abstract and do not use the scientific method as the primary tool to investigate them, so CS is not fundamentally science.
+4. The author writes that he “often find[s] that eager undergraduates are either excited about something that is not CS, or stems from an advanced topic that definitely is CS.” Are there any things that you are excited about that you thought is CS but might not fit under the author’s definition of CS? Alternatively, are there any advanced topics that you now think are definitely CS based on the author’s definition.
+I am excited to learn about machine learning and neural networks. I briefly learned some methods in computational methods in the sciences. I would also like to learn about large language models and Open AI.
+

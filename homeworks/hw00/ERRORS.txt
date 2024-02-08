@@ -1,0 +1,61 @@
+Remove the ; at the end of line 8.
+Error message:
+
+
+Fortune.java:8: error: ';' expected
+    System.out.println("A journey of a thousand miles begins with a single step.") // todo: your message here
+                                                                                  ^
+1 error
+
+
+Meaning: a colon which is expected isn't there, leading to a failure in compiling.
+
+
+Change Fortune in line 5 to fortune.
+Error message:
+
+
+Fortune.java:5: error: class fortune is public, should be declared in a file named fortune.java
+public class fortune {
+       ^
+1 error
+
+
+
+
+Meaning:  class fortune is public, should be declared in a file named fortune.java, file name doesn't match the name in the vim files public class file
+Change main to blah in line 7.
+Error: Main method not found in class Fortune, please define the main method as:
+   public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application
+
+
+Meaning: The method main is not recognized or found, and it needs to be defined instead of blah because the format is public static void main(String[] args).
+Remove the } in line 10.
+Fortune.java:10: error: reached end of file while parsing
+}
+ ^
+1 error
+
+
+Meaning: The Java compiler encountered the end of the file before it expected it, and around line 10 is missing } as they are mismatched brackets.
+Remove the } in line 9.
+Fortune.java:9: error: reached end of file while parsing
+   } 
+    ^
+1 error
+
+
+Meaning: The Java compiler encountered the end of the file before it expected it, and around line 9 is missing } as they are mismatched brackets.
+
+
+Remove change void to arg in line 7.
+Fortune.java:7: error: cannot find symbol
+  public static args main(String[] args) {
+                ^
+  symbol:   class args
+  location: class Fortune
+1 error
+
+
+Meaning: The format of public static args main(String[] args) { is missing, and void is missing, and args is in its place, preventing the file to compile.
