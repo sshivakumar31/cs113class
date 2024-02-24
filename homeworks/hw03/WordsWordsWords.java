@@ -78,7 +78,7 @@ public class WordsWordsWords {
 
 		word = word.replaceAll("[^a-z]", "");
 
-			int isoSum = word.length() * ('z' - 'a' + 1);
+			int isoSum = word.length() * ('j' - 'a' + 1);
 
 		return isoSum;
 	}
