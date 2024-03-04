@@ -14,10 +14,36 @@ public class WordsRecursion {
 		}
 	}
 
-	// 2.2 removeLetters (extra credit)
-	public static String removeLetters(String haystack, char[] needlesToRemove) {
-		return "";
-	}
+// 2.2 removeLetters (extra credit)
+    public static String removeLetters(String haystack, char[] needlesToRemove) {
+        return removeLettersHelper(haystack, needlesToRemove, 0, new StringBuilder());
+    }
+
+    private static String removeLettersHelper(String haystack, char[] needlesToRemove, int index, StringBuilder result) {
+        if (index >= haystack.length()) {
+            return result.toString();
+        }
+        char currentChar = haystack.charAt(index);
+        if (!contains(needlesToRemove, currentChar)) {
+            result.append(currentChar);
+        }
+        return removeLettersHelper(haystack, needlesToRemove, index + 1, result);
+    }
+
+    private static boolean contains(char[] array, char target) {
+        return containsHelper(array, target, 0);
+    }
+
+    private static boolean containsHelper(char[] array, char target, int index) {
+        if (index >= array.length) {
+            return false;
+        }
+        if (array[index] == target) {
+            return true;
+        }
+        return containsHelper(array, target, index + 1);
+    }
+
 
 	// 2.3 abecedarian
 	public static boolean isAbecedarian(String word) {
