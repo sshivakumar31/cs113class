@@ -15,8 +15,45 @@ public class WordsRecursion {
 	}
 
 // 2.2 removeLetters (extra credit)
-    public static String removeLetters(String haystack, char[] needlesToRemove) {
-        return removeLettersHelper(haystack, needlesToRemove, 0, new StringBuilder());
+public static String[] removeLetters(String haystack, char[] needlesToRemove) {
+        // Base case
+        if (haystack.isEmpty()) {
+            return new String[]{""};
+        }
+        
+        // Recursive case
+        char firstChar = haystack.charAt(0);
+        String[] removedFromRest = removeLetters(haystack.substring(1), needlesToRemove);
+        
+        // If the first character is to be removed, skip it
+        if (contains(needlesToRemove, firstChar)) {
+            return removedFromRest;
+        } else {
+            // Otherwise, prepend the first character to the results from the recursive call
+            String[] result = new String[removedFromRest.length];
+            for (int i = 0; i < removedFromRest.length; i++) {
+                result[i] = firstChar + removedFromRest[i];
+            }
+            return result;
+        }
+    }
+
+    // Helper method to check if a character is present in an array
+    private static boolean contains(char[] array, char key) {
+        // Base case
+        if (array.length == 0) {
+            return false;
+        }
+        // Recursive case
+        if (array[0] == key) {
+            return true;
+        } else {
+            char[] newArray = new char[array.length - 1];
+            for (int i = 1; i < array.length; i++) {
+                newArray[i - 1] = array[i];
+            }
+            return contains(newArray, key);
+        }
     }
 
     private static String removeLettersHelper(String haystack, char[] needlesToRemove, int index, StringBuilder result) {
@@ -123,11 +160,18 @@ public class WordsRecursion {
 
 	// Testing methods
 	public static void main(String[] args) {
-		String inputStr = "asdfghsassaaaae";
-		char letterToRemove = 'a';
-		System.out.println("Original string: " + inputStr);
-		System.out.println("String with letter '" + letterToRemove + "' removed: " + removeLetter(inputStr, letterToRemove));
+		String haystack = "accompany";
+        char[] needlesToRemove = {'c', 'y'};
 
+        System.out.println("Original String: " + haystack);
+        System.out.println("Characters to remove: " + new String(needlesToRemove));
+
+  String[] result = removeLetters(haystack, needlesToRemove);
+        if (result.length == 0) {
+            System.out.println("Test failed. Expected: [aompan], but got: []");
+        } else {
+            System.out.println("After removal: " + String.join(", ", result));
+        }      
 		String abecedarianWord = "abdest";
 		System.out.println("Is '" + abecedarianWord + "' abecedarian? " + isAbecedarian(abecedarianWord));
 
