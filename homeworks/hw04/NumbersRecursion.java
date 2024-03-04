@@ -22,18 +22,23 @@ public class NumbersRecursion {
 	}
 
 	// sumOfPreviousN
-	
-	public static int sumOfPreviousN(int n, int m) {
-	    if (n <= 0 || m <= 0) {
-	        return 0; 
-	    } else if (m == 1) {
-	        return n; // Base case
-	    } else if (n % 2 == 0) {
-	        return n + sumOfPreviousN(n - 2, m - 1); 
-	    } else {
-	        return n + sumOfPreviousN(n - 1, m - 1); 
-	}
 
+
+    public static int sumOfPreviousN(int n1, int n2) {
+        if (n1 < n2) {
+            return 0; // Base case: if n1 is less than n2, return 0
+        } else if (n1 - n2 >= 0) {
+            int sum = 0;
+            int temp = n1;
+            // Calculate sum recursively until temp is less than n2
+            sum += temp - n2;
+            sum += sumOfPreviousN(temp - n2, n2);  // Recursively call the function
+            return sum;
+        } else {
+            return n1;
+        }
+    }	
+	
 	public static void main(String[] args) {
 		// Test methods here
 		System.out.print("Previous even numbers before 6: ");
