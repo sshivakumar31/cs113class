@@ -23,15 +23,16 @@ public class NumbersRecursion {
 
 	// sumOfPreviousN
 	
-public static int sumOfPreviousN(int n, int m) {
-    if (n < m) {
-        return 0;
-    } else if (n % 2 == 0) {
-        return n + sumOfPreviousN(n - 2, m);
-    } else {
-        return sumOfPreviousN(n - 1, m);
-    }
-}
+	public static int sumOfPreviousN(int n, int m) {
+	    if (n <= 0 || m <= 0) {
+	        return 0; 
+	    } else if (m == 1) {
+	        return n; // Base case
+	    } else if (n % 2 == 0) {
+	        return n + sumOfPreviousN(n - 2, m - 1); 
+	    } else {
+	        return n + sumOfPreviousN(n - 1, m - 1); 
+	}
 
 	public static void main(String[] args) {
 		// Test methods here
