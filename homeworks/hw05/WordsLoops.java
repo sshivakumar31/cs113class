@@ -1,3 +1,5 @@
+// HW05 Word Loops
+
 import java.util.Random;
 
 public class WordsLoops {

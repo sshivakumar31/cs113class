@@ -1,3 +1,6 @@
+//HW05 Arrays
+
+
 public class ArraysLoops {
 
 	public static void main(String[] args) {
