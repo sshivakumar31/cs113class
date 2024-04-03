@@ -1,3 +1,5 @@
+//HW06 Minesweeper 
+
 import java.util.Scanner;
 
 /**
