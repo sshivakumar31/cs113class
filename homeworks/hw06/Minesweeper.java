@@ -125,7 +125,7 @@ public class Minesweeper {
         }
 
         System.out.println("Game Over!");
-        display(board, display);
+	Board.display(board);
         scanner.close();
     }
 }
