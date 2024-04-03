@@ -1,7 +1,10 @@
 //April 1st, 2024
-//HW 06 Minesweeper.java
+//HW 06 Minesweeper
 
 import java.util.Scanner;
+
+
+
 
 public class Minesweeper {
     public static void welcomeMessage() {

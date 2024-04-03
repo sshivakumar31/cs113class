@@ -1,9 +1,10 @@
 //April 1st, 2024
-//HW 06 Board.java
-
+//HW 06 Board
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+
 
 class Board {
     public static int[][] generate(String fileName) {
