@@ -21,7 +21,7 @@ public class Minesweeper {
      */
     public static void display(int[][] board, boolean[][] display) {
         for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
+            for (int j = 0; j < board.length; j++) {
                 if (display[i][j]) {
                     if (board[i][j] == -1) {
                         System.out.print("X ");
@@ -64,7 +64,7 @@ public class Minesweeper {
     public static boolean isValidInput(String input, int boardSize) {
         try {
             int num = Integer.parseInt(input);
-            return num >= 0 && num < boardSize;
+            return num >= 0 && num < boardSize-1;
         } catch (NumberFormatException e) {
             return false;
         }
@@ -102,7 +102,7 @@ public class Minesweeper {
             System.out.print("Enter a row: ");
             String rowInput = scanner.nextLine();
             if (!isValidInput(rowInput, boardSize)) {
-                System.out.println("Please enter an integer in range [0, " + (boardSize - 1) + ")");
+                System.out.println("Please enter an integer in range [0, " + (boardSize) + ")");
                 continue;
             }
             int row = Integer.parseInt(rowInput);
@@ -110,7 +110,7 @@ public class Minesweeper {
             System.out.print("Enter a col: ");
             String colInput = scanner.nextLine();
             if (!isValidInput(colInput, boardSize)) {
-                System.out.println("Please enter an integer in range [0, " + (boardSize - 1) + ")");
+                System.out.println("Please enter an integer in range [0, " + (boardSize) + ")");
                 continue;
             }
             int col = Integer.parseInt(colInput);
