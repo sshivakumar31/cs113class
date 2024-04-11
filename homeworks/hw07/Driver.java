@@ -46,4 +46,15 @@ public class Driver {
             System.out.println("Error: File not found.");
         } catch (NumberFormatException e) {
             System.out.println("Error: Invalid number format in the file.");
-        } catch (ArrayIndexOutOfBoundsException 
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: An error occurred while parsing the file.");
+        }
+    }
+
+    // Method to process course data (e.g., calculate GPA)
+    private static void processCourse(StudentCourse course) {
+        // You can implement any specific processing logic here
+        // For example, calculating GPA, storing data, etc.
+        System.out.println("Processed course: " + course);
+    }
+}
