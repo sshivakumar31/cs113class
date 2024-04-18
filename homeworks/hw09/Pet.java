@@ -1,11 +1,12 @@
-/**
- * Represents a pet.
- */
+//Pet.java
+
 public class Pet {
     // Instance variables
     private String name; // Name of the pet
     private String owner; // Name of the pet's owner
     private double weight; // Weight of the pet
+    public int NumVisits; // Number of Visits
+    public double totalCost; // Total Cost
 
     /**
      * Constructs a pet with the specified name, owner, and weight.
@@ -17,58 +18,72 @@ public class Pet {
         this.name = name;
         this.owner = owner;
         this.weight = weight;
+	this.NumVisits = 0;
     }
 
-    /**
-     * Returns the name of the pet.
-     * @return the name of the pet
-     */
+
     public String getName() {
         return name;
     }
 
-    /**
-     * Returns the name of the pet's owner.
-     * @return the name of the pet's owner
-     */
+
     public String getOwner() {
         return owner;
     }
 
-    /**
-     * Returns the weight of the pet.
-     * @return the weight of the pet
-     */
+  
     public double getWeight() {
         return weight;
     }
 
-    /**
-     * Sets the weight of the pet.
-     * @param weight the weight to set
-     */
-    public void setWeight(double weight) {
-        this.weight = weight;
+   
+    public int getNumVisits() {
+        return NumVisits;
     }
+  
+
+    @Override
+    public String toString() {
+       return this.name + " (owner " + this.owner + ") " + this.weight
+           + " lbs, $" + this.avgCost() + " avg cost/visit  ";
+    }
+ 
+
 
     /**
      * Simulates a visit to the vet where the pet receives shots.
      * @param numShots the number of shots the pet receives
      * @return the cost of the visit
      */
-    public double visit(int numShots) {
-        double baseCost = 85.00; // Base cost for a visit
-        double shotCost = 30.00 * numShots; // Cost for shots
-        return baseCost + shotCost;
+ 	
+      public double visit(int numShots) {
+        NumVisits++;
+        double Cost = 85.00 + 30 * numShots;
+        totalCost += Cost;
+        return Cost;
     }
 
-    /**
-     * Returns a string representation of the pet.
-     * @return a string representation of the pet
-     */
-    @Override
-    public String toString() {
-        return name + " (owner " + owner + ") " + weight + " lbs";
+    public double avgCost() {
+        double AvgCost = totalCost/NumVisits;
+        if (NumVisits != 0) {
+            return AvgCost;
+        }
+       else {
+         AvgCost = 0;
+         return AvgCost;  
+       }
+    }
+
+    public boolean equals(Pet otherPet) {
+        String name2 = otherPet.getName();
+        String owner2 = otherPet.getOwner();
+        if (this.getName().toLowerCase().compareTo(name2.toLowerCase())==0 && this.getOwner().toLowerCase().compareTo(owner2.toLowerCase())==0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
+
 

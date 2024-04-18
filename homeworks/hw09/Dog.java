@@ -1,6 +1,5 @@
-/**
- * Represents a dog, which is a type of pet.
- */
+// Dog.java
+
 public class Dog extends Pet {
     // Instance variable
     private String size; // Size of the dog (small, medium, large)
@@ -40,7 +39,10 @@ public class Dog extends Pet {
      * @param numShots the number of shots the dog receives
      * @return the cost of the visit
      */
-    @Override
+  
+
+
+ @Override
     public double visit(int numShots) {
         double baseCost = 85.00; // Base cost for a visit
         double shotCost = 30.00 * numShots; // Cost for shots
@@ -66,4 +68,5 @@ public class Dog extends Pet {
         return super.toString() + " (" + size + ")";
     }
 }
+
 
