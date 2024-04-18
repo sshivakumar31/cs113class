@@ -1,0 +1,74 @@
+avet is a type of database: true
+visit1: 115.0
+
+--- Vet has 2 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tweetie Bird (owner Looney Tunes) 1.75 lbs, $0.0 avg cost/visit
+>> average client weight: 175.875
+Adding a string should return false: falsevisit0: 125.0
+inside visit1: 155.0
+outside visit1: 185.0
+c is Sylvester (owner Looney Tunes) 15.5 lbs, $170.0 avg cost/visit
+
+--- Vet has 4 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tweetie Bird (owner Looney Tunes) 1.75 lbs, $0.0 avg cost/visit
+Tiger (owner Some Body) 8.0 lbs, $125.0 avg cost/visit
+Sylvester (owner Looney Tunes) 15.5 lbs, $170.0 avg cost/visit
+>> average client weight: 93.8125
+med visit3: 216.5
+lg visit3: 238.25
+
+--- Vet has 6 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tweetie Bird (owner Looney Tunes) 1.75 lbs, $0.0 avg cost/visit
+Tiger (owner Some Body) 8.0 lbs, $125.0 avg cost/visit
+Sylvester (owner Looney Tunes) 15.5 lbs, $170.0 avg cost/visit
+Fido (owner Some Body) 32.2 lbs, $216.5 avg cost/visit
+Dino (owner Flintstones) 150.0 lbs, $238.25 avg cost/visit
+>> average client weight: 92.90833333333335
+
+--- Vet has 8 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tweetie Bird (owner Looney Tunes) 1.75 lbs, $0.0 avg cost/visit
+Tiger (owner Some Body) 8.0 lbs, $125.0 avg cost/visit
+Sylvester (owner Looney Tunes) 15.5 lbs, $170.0 avg cost/visit
+Fido (owner Some Body) 32.2 lbs, $216.5 avg cost/visit
+Dino (owner Flintstones) 150.0 lbs, $238.25 avg cost/visit
+Benji (owner Joe Camp) 10.0 lbs, $0.0 avg cost/visit
+Tony (owner Kellogg) 20.0 lbs, $0.0 avg cost/visit
+>> average client weight: 73.43125
+
+a few more tests...
+find p: Tony (owner Kellogg) 20.0 lbs, $0.0 avg cost/visit
+Tweetie 5 shots: 235.0
+found Tweetie: Tweetie Bird (owner Looney Tunes) 1.75 lbs, $235.0 avg cost/visit
+find Fido: Fido (owner Some Body) 32.2 lbs, $216.5 avg cost/visit
+adding string to Vet: false
+deleting string: null
+
+
+deleting pets:
+Tweetie Bird (owner Looney Tunes) 1.75 lbs, $235.0 avg cost/visit
+Fido (owner Some Body) 32.2 lbs, $216.5 avg cost/visit
+Sylvester (owner Looney Tunes) 15.5 lbs, $170.0 avg cost/visit
+--- Vet has 5 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tiger (owner Some Body) 8.0 lbs, $125.0 avg cost/visit
+Dino (owner Flintstones) 150.0 lbs, $238.25 avg cost/visit
+Benji (owner Joe Camp) 10.0 lbs, $0.0 avg cost/visit
+Tony (owner Kellogg) 20.0 lbs, $0.0 avg cost/visit
+>> average client weight: 107.6
+--- Vet has 6 clients
+Vet Pets R Us client list:
+Rudolph (owner Santa Claus) 350.0 lbs, $115.0 avg cost/visit
+Tiger (owner Some Body) 8.0 lbs, $125.0 avg cost/visit
+Dino (owner Flintstones) 150.0 lbs, $238.25 avg cost/visit
+Benji (owner Joe Camp) 10.0 lbs, $0.0 avg cost/visit
+Tony (owner Kellogg) 20.0 lbs, $0.0 avg cost/visit
+Happy (owner Some Body) 13.5 lbs, $0.0 avg co
